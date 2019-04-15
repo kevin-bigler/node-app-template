@@ -1,0 +1,43 @@
+{
+  "name": "node-app-template",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/person/projecte.git",
+  "author": "person <email>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest src",
+    "build": "parcel build src/index.html # or src/index.js",
+    "dev": "parcel src/index.html # not usually applicable to src/index.js",
+    "watch": "parcel watch src/index.html # or src/index.js",
+    "lint": "eslint src",
+    "flow": "flow src"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "flow-bin": "^0.97.0",
+    "jest": "^24.7.0",
+    "jest-canvas-mock": "^2.0.0-beta.1",
+    "parcel-bundler": "^1.12.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ]
+  }
+}
