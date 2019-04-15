@@ -12,7 +12,8 @@
           "node": "8.10"
         }
       }
-    ]
+    ],
+    "@babel/preset-flow"
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties"
